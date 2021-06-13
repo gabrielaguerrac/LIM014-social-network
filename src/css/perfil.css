@@ -1,0 +1,336 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+@media screen and (max-width: 700px){
+
+    /* {
+       background-color: #FF826D;
+   } */
+   #container {
+       box-sizing: content-box;
+   }
+   
+   header{
+    background-color:#6F1747;
+    display: flex;
+    box-sizing: content-box;
+    /* justify-content: space-between; */
+    align-content: center;
+    align-items: center;
+    max-width: 100%;
+   }
+
+   header > #btnSalir {
+       display: none;
+   }
+
+   .h1-style {
+    display: none;
+   }
+
+   #logo {
+    /* justify-content: center; */
+    /* align-self: center; */
+    /* align-items: center; */
+    /* //justify-content: flex-end; */
+    display: block;
+    margin: auto;
+   }
+
+   .profile {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 100%;
+   }
+
+   #btnSalirM {
+    /* justify-content: flex-end; */
+    background-color: #6F1747;
+    border: none;
+    margin-top: 10px;
+   }
+
+   .profile-badge {
+    display: flex;
+    border:1px solid #c1c1c1;
+    padding:5px;
+    position: relative;
+    font-family: Montserrat, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* display: block; */
+    }
+
+    #post-form {
+    display: none;
+    }
+   
+    .postUserImage {
+    display: none;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .profile-badge {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border: 0;
+        /* height: 100vh; */
+        margin-top: 20px;
+    }
+
+    .profile {
+        height: auto;
+    }
+
+    /* .profile-Edit, .profileEditPhoto{
+        width: 100%;
+    } */
+
+    .post-card{
+        display: none;
+    }
+
+    #camera {
+        width: 50px;
+        border-radius: 50%;
+    }
+
+
+    #srcImage {
+        border-radius: 50%;
+    }
+
+    .profile > img{
+        width: 50%;
+        /* justify-content: center; */
+        display: block;
+        margin: auto;
+    }
+
+    .profile-pic > img {
+        display: block;
+        margin: auto;
+        border-radius: 50%;
+        width: 30%;
+    }
+
+    .profileDisplayName > h3 {
+        text-align: center;
+    }
+
+    #cargando  {
+        text-align: center;
+    }
+
+    .user-detail > #editProfile {
+        /* margin: auto; */
+        /* position: relative; */
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    #editProfile {
+        align-items: center;
+        margin-left: 40%;
+    }
+
+    footer {
+        /* display: block; */
+        background-color: #6F1747;
+        /* display: flex; */
+        /* justify-content: space-between; */
+        width: 100%;
+        position: fixed;
+        text-align: center;
+        left: 0;
+        bottom: 0;
+    }
+
+    .message {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .imageWarning {
+        width: 50px;
+    }
+
+    #perfilImg {
+        margin-top: 5px;
+    }
+
+    .viewPerfil-btnonclick{
+        display: none;
+    }
+   }
+   
+   @media screen and (min-width: 600px) and (max-width: 1049px) {
+   
+     
+
+        footer {
+            display: block;
+            background-color: #6F1747;
+        }
+       
+       /* #imageLog{
+           margin: 0px;
+           display: none;
+           flex-direction: column;
+           color: #ffffff;
+           background-image: url(https://user-images.githubusercontent.com/77282012/117875257-92405f80-b267-11eb-8362-d4218c57ca17.png);
+           background-size: cover;
+           height: 100%;
+           width: 65%;
+       } */
+
+       .profile-pic > img {
+        display: block;
+        margin: auto;
+        border-radius: 50%;
+        width: 30%;
+    }
+   
+       #imageRegister{
+           display: none;
+       }  
+    }
+
+@media screen and (min-width: 1050px){
+
+    /* Perfil */
+    .profile-badge{
+        border:1px solid #c1c1c1;
+        padding:5px;
+        position: relative;
+        font-family: Montserrat, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+
+    .profile img{
+        height: 200px;
+        width: 100%;
+    }
+
+    .profile-Edit{
+        margin: 12px;
+    }
+
+    .buttonProfile{
+        color: #ffffff;
+        background: #FF826D;
+        padding: 10px;
+        border-radius: 12px;
+        border: none;
+        margin-top: 15px;
+    }
+    
+    .user-detail{
+        background-color: #fff;
+        position: relative;
+        padding:65px 0px 10px 0px;
+        color:#8B8B89;
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Nombre del perfil */
+
+    .user-detail h3{
+        color: #000;
+        width: 250px;
+        margin: 0;
+        font-size: 16px;
+        font-family:Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+
+    .user-detail p{
+        font-size:14px;
+    }
+    .user-detail .btn{
+        margin-bottom:10px;
+        background-color: #fff;
+        border:1px solid #DEDEDE;
+        border-radius: 0px;
+        color:black;
+    }
+    .user-detail .btn i{
+        color:#D35B4D;
+        padding-right:18px;
+    }
+    .profile-pic{
+        position: absolute;
+        height:120px;
+        width:120px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 140px;
+        z-index: 1001;
+        display: flex;
+        flex-direction: row;
+    }
+    .profile-pic img{
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        border: solid 5px #fffcf8;
+    }
+
+    /* IMAGEN DE PERFIL PARA EDITAR*/
+    .profileEditPhoto{
+        margin: 10px;
+    }
+    .profileEditPhoto img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: solid black 3px;
+    }
+
+    #camera{
+        width: 40px;
+        height: 40px;
+        margin-right: -18px;
+    }
+
+    .profileEditPhoto img:hover {
+        filter: opacity(.5);
+    }
+    
+    #viewPerfil{
+        width: 25%;
+        padding: 0%;
+        margin: 3%;
+    }
+
+    h1 #viewPerfil {
+        font-size: 14px;
+        line-height: 100%;  
+    } 
+    /* FIN DE CSS PERFIL */
+
+    #gif{
+        width: 40px;
+        height: 40px;
+    }
+
+    #logo{
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+
+}

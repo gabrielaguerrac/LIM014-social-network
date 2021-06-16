@@ -1,6 +1,3 @@
-/* eslint-disable max-len */
-/* eslint-disable no-console */
-/* eslint-disable no-param-reassign */
 import {
   editPost, addComment, savePost, getComment, currentUser, updateLikes,
 } from '../controller-function/post-firestore.js';
@@ -29,7 +26,7 @@ export default () => {
                 <section class="body-form">
                   <section class="photoForm"></section>
                   <div id="body-form-postsection">
-                  <textarea id="post-description" name="post-form" cols="50" rows="3" class="form-control" placeholder="¿Qué estás pensando?"></textarea>
+                  <textarea id="post-description" name="post-form" class="form-control" placeholder="¿Qué estás pensando?"></textarea>
                   <div id="imgpreview"></div>
                   </div>
                   <label for="fileButton">
@@ -107,9 +104,9 @@ export default () => {
             </div>
             ${(post.photo) ? `<img class="photoPublic" src="${post.photo}">` : ''}
           </div>
-          <div>
+          <div class="likeAndComment">
             <button class="like" data-id="${post.id}"> ❤ </button><label>${post.likes.length}</label>
-            <button class="commentButton" data-id="${post.id}"> comentarios </button>
+            <button class="commentButton" data-id="${post.id}"> comentarios <img src="https://user-images.githubusercontent.com/77282012/121824485-1aa08e80-cc72-11eb-8c6f-127cd392e00a.png" ></button>
           </div>
           <div hidden class="userComment" data-id="${post.id}">
             <form class="commentContainer" data-id="${post.id}">
@@ -226,7 +223,6 @@ export default () => {
     }
   };
 
-
   // FUNCION PARA TRAER DE FIRESTORE LOS DOC CON LA INFO DE POSTS
   // firebase.auth().onAuthStateChanged((user) => {
   const post = (user) => {
@@ -282,12 +278,12 @@ export default () => {
   postForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const usernameInside = divElem.querySelector('#post-username');
-    const description = postForm['post-description'];
     const date = new Date().toLocaleString('en-ES');
     const userPr = currentUser();
     const userId = userPr.uid;
     const userPhoto = userPr.photoURL;
     const likes = [];
+    const description = postForm['post-description'];
     const inputFile = btnSelectFile.files;
     if (description.value || inputFile.length >= 1) {
       if (inputFile.length >= 1) {
@@ -299,7 +295,6 @@ export default () => {
         const imageRef = storageRef.child(`images/${file.name}`);
         imageRef.put(file).then((snapshot) => {
           snapshot.ref.getDownloadURL().then((url) => {
-            console.log(textPost);
             savePost(usernameInside.value, textPost, date, userId, userPhoto, likes, url);
           });
         });
@@ -311,7 +306,6 @@ export default () => {
     description.focus();
     divElem.querySelector('#imgpreview').innerHTML = '';
   });
-  // --- PROBAR --
 
   // FUNCION PARA CERRAR SESION
   btnSalir.addEventListener('click', () => {

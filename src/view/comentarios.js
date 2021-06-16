@@ -1,4 +1,4 @@
-import { deleteComment , editComment } from '../controller-function/post-firestore.js';
+import { deleteComment, editComment } from '../controller-function/post-firestore.js';
 
 export const commentView = (collection, post, user, contenedor) => {
   collection.forEach((com) => {

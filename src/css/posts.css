@@ -89,6 +89,7 @@
     .btns-edit-delete{
         position: relative;
         left: 90%;
+        display: block;
     }
 
     .btn-edit, .btn-delete{
@@ -97,6 +98,10 @@
         border-radius: 5px;
         background-color: transparent;
         border: none;
+    }
+
+    .btnsNotShow {
+        display: none;
     }
 
     .note{

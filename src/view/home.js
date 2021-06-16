@@ -85,11 +85,10 @@ export default () => {
         postElem.innerHTML = `
         <div class="post-card">
           <div class="cardUserPost">
-          ${(post.userId === user.uid)
-    ? `<div class="btns-edit-delete" name="${post.userId}" data-id-post="${post.id}">
+          <div class="${post.userId === user.uid ? 'btns-edit-delete' : 'btnsNotShow'} "  name="${post.userId}" data-id-post="${post.id}">
               <img class="btn-edit" data-id="${post.id}" src="https://user-images.githubusercontent.com/77282012/120040454-32b6b380-bfcc-11eb-81cb-96f0e713e84c.png">
               <img class="btn-delete" data-id="${post.id}" src="https://user-images.githubusercontent.com/77282012/120018025-389c9c80-bfac-11eb-9d7d-0a68441eca20.png">
-            </div>` : ''}
+            </div>
             <section class="postUser">
               <img class="postUserImage" src="${post.userPhoto}">
               <section>

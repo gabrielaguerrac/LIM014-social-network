@@ -1,3 +1,4 @@
+/* eslint-disable no-template-curly-in-string */
 /* eslint-disable func-names */
 import {
   editPost, addComment, savePost, getComment, currentUser, updateLikes,
@@ -104,7 +105,7 @@ export default () => {
               <button class="aceptEdit">Aceptar</button>
               <button class="cancelEdit">Cancelar</button>  
             </div>
-            ${(post.photo) ? `<img class="photoPublic" src="${post.photo}">` : ''}
+            ${(post.photo) ? '<img class="photoPublic" src="${post.photo}">' : ''}
           </div>
           <div class="likeAndComment">
             <button class="like" data-id="${post.id}"> ❤ </button><label>${post.likes.length}</label>
